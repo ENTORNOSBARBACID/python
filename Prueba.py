@@ -1,2 +1,2 @@
 saludo=input("Prueba de uso     ")
-print(saludo)
+print(saludo)   
