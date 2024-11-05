@@ -1,0 +1,11 @@
+nombre="Rosa"
+print(type(nombre))
+nombre="Alberto"
+print(type(nombre))
+letra=nombre[-1]
+print(letra)
+dni="12345678K"
+letra=dni[-1]
+print(letra)
+letra=dni[1:8:3]
+print(letra)
