@@ -1,10 +1,21 @@
 from Validar.Usuario import validarUsuario
 from Validar.Contraseña import validarContraseña
 
-usuario="Peadad"
-validar=validarUsuario(usuario)
-print(validar)
+usuario=input("Introduce el nombre de usuario, introdue '*' para terminar   ")
+contraseña=input("Introduce la contraseña del usuario   ")
+dicUsuarios={}
+validar=True
+while usuario != "*":
+    validar=validarUsuario(usuario)
+    print(validar)
+    if validar==True:
+        validar=validarContraseña(contraseña)   
+        print(validar)     
+        if validar==True:
+            dicUsuarios[usuario]=contraseña
+            print("El usuario se ha creado correctamente    ")
+    validar==True
+    usuario=input("Introduce el nombre de usuario, introdue '*' para terminar   ")
+    contraseña=input("Introduce la contraseña del usuario   ")
 
-contraseña="HOLES1TA*S"
-validar=validarContraseña(contraseña)
-print(validar)
+print(dicUsuarios)

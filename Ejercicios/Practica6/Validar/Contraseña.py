@@ -5,8 +5,11 @@ def validarContraseña(c):
     if len(c)<8:
         print("La contraseña debera tener al menos 8 caracteres")
         return False
-    if re.search(r"/ [A-Z][a-z] /",c)==False:
+    if re.search(r"/ [A-Z] /",c)==False:
         print("La contraseña debera tener al menos una letra en mayusculas")
+        return False    
+    if re.search(r"/ [a-z] /",c)==False:
+        print("La contraseña debera tener al menos una letra en minusculas")
         return False    
     if re.search(r"/ \d /",c)==False:
         print("La contraseña debera tener al menos un digito")
