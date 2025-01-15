@@ -8,18 +8,18 @@ def crearDicTrabajo(ruta):
         for fila in contenido:
             clave = fila[0]
             valor = fila[1:]
-            if valor[0] not in lista:
-                if clave in dic:
-                    if valor not in dic[clave]:
-                        dic[clave].append(valor)
-                    else:
-                        min=int(valor[1])
-                        for i in dic[clave]:
-                            min+=int(i[1])
-                            total=i[0]+","+str(min)
-                            dic[clave]=[total]
+            if clave in dic:
+                if valor not in dic[clave]:
+                    dic[clave].append(valor)
                 else:
-                        dic[clave] = [valor]
+                    min=int(valor[1])
+                    for i in dic[clave]:
+                        min+=int(i[1])
+                        print(min)
+                        total=i[0]+", "+str(min)
+                        dic[clave]=[total]
+            else:
+                dic[clave] = [valor]
                 
     print("APARTADO 3")
     for i in dic:

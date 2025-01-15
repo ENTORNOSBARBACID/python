@@ -11,6 +11,7 @@ i=mostrarInfo(p)
 
 
 ruta2="EXAMEN1EVAL24-25/assets/sitios_trabajo.txt"
+print(ruta2[0])
 s=mostrarSitios(ruta2)
 
 print("Lista: ")
